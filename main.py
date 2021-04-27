@@ -14,8 +14,9 @@ finally:
     time.sleep(3)
     search.send_keys(Keys.ENTER)
     actual = browser.find_element_by_css_selector('.base').text
-    expected = "SSD накопители"
-    assert actual == expected
+    expected1 = "SSD накопители"
+    expected2 = "SSD накопичувачі"
+    assert actual == expected1 or actual == expected2
     time.sleep(4)
     browser.save_screenshot("SSD.png")
     browser.close()
